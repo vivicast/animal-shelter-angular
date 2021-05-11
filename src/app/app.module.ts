@@ -6,10 +6,15 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from '@core/core.module';
 import {SharedModule} from '@shared/shared.module';
+import {AdoptersComponent} from './adopters/adopters.component';
+import {AdopterService} from './adopters/adopter.service';
+import {AdopterCreationUpdatingDialogComponent} from './adopters/adopter-creation-updating-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdoptersComponent,
+    AdopterCreationUpdatingDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +23,9 @@ import {SharedModule} from '@shared/shared.module';
     CoreModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [
+    AdopterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
