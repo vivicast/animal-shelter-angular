@@ -1,37 +1,34 @@
 import {Injectable} from '@angular/core';
-import {EMPTY, Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {HttpService} from '@core/http.service';
 import {Adopter} from './adopter.model';
+import {EndPoints} from '@shared/end-points';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AdopterService {
-  testAdopters = [
-    { name: 'adopter1', nif: '00000001', address: 'address1', birthDay: new Date(Date.now())},
-    { name: 'adopter2', nif: '00000002', address: 'address2', birthDay: new Date(Date.now())}
-  ];
 
   constructor(private httpService: HttpService) {
   }
 
   findAll(): Observable<Adopter[]> {
-    return of(this.testAdopters);
+    return this.httpService.get(EndPoints.ADOPTERS);
   }
 
   create(adopter: Adopter): Observable<Adopter> {
-    return of();
+    return this.httpService.post(EndPoints.ADOPTERS, adopter);
   }
 
   read(adopterNif: string): Observable<Adopter> {
-    return of(this.testAdopters[0]);
+    return this.httpService.get(EndPoints.ADOPTERS + '/' + adopterNif);
   }
 
   update(oldAdopterNif: string, adopter: Adopter): Observable<Adopter> {
-    return of();
+    return this.httpService.put(EndPoints.ADOPTERS + '/' + oldAdopterNif, adopter);
   }
 
-  delete(nif: string): Observable<void> {
-    return EMPTY;
+  delete(adopterNif: string): Observable<void> {
+    return this.httpService.delete(EndPoints.ADOPTERS + '/' + adopterNif);
   }
 }
