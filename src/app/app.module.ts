@@ -9,12 +9,17 @@ import {SharedModule} from '@shared/shared.module';
 import {AdoptersComponent} from './adopters/adopters.component';
 import {AdopterService} from './adopters/adopter.service';
 import {AdopterCreationUpdatingDialogComponent} from './adopters/adopter-creation-updating-dialog.component';
+import {ColoniesComponent} from './colonies/colonies.component';
+import {ColonyService} from './colonies/colony.service';
+import {ColonyCreationUpdatingDialogComponent} from './colonies/colony-creation-updating-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdoptersComponent,
-    AdopterCreationUpdatingDialogComponent
+    AdopterCreationUpdatingDialogComponent,
+    ColoniesComponent,
+    ColonyCreationUpdatingDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import {AdopterCreationUpdatingDialogComponent} from './adopters/adopter-creatio
     SharedModule,
   ],
   providers: [
-    AdopterService
+    AdopterService,
+    ColonyService
   ],
   bootstrap: [AppComponent]
 })

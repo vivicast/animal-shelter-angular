@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+  <mat-form-field class="full-width">
+    <mat-label>Registry</mat-label>
+    <input [(ngModel)]="colony.registry" matInput required type="number"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Manager</mat-label>
+    <input [(ngModel)]="colony.manager" matInput required type="text"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Phone</mat-label>
+    <input [(ngModel)]="colony.phone" matInput type="text"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Location</mat-label>
+    <input [(ngModel)]="colony.location" matInput type="text"/>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button cdkFocusInitial mat-dialog-close mat-raised-button>Close</button>
+  <button (click)="create()" *ngIf="isCreate()" [disabled]="invalid()" color="primary" mat-raised-button>Create</button>
+  <button (click)="update()" *ngIf="!isCreate()" [disabled]="invalid()" color="primary" mat-raised-button>Update</button>
+</mat-dialog-actions>
