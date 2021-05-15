@@ -1,0 +1,25 @@
+#title {
+  font-family: Kaushan Script;
+  font-size: 4em;
+  color: #3f51b5;
+}
+
+.tile-content {
+  text-align: center;
+}
+
+.tile-content mat-icon {
+  font-size: 7em;
+}
+
+.tile-content span {
+  font-size: 3em;
+  color: #3f51b5;
+  display: block;
+}
+
+mat-grid-tile:hover {
+  border: solid 0.25em #3f51b5;
+  background: aliceblue;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title {
+  font-family: Kaushan Script;
+  font-size: 1.75em;
+  padding-left: 0.5em;
+}
