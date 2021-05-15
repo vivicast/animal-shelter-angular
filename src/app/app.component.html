@@ -1,6 +1,11 @@
 <mat-toolbar color="primary">
+  <div fxFlex="5">
+    <img id="logo" src="../assets/logo56.png" alt="logo">
+  </div>
   <div fxFlex>
-    {{ title }}
+    <button mat-button aria-label="Animal Shelter" routerLink="/">
+      <span id="title">{{ title }}</span>
+    </button>
   </div>
   <div fxFlex>
     <button mat-icon-button aria-label="Cats" routerLink="cats">

@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-content>
+    <div fxFlex="10" fxFlexOffset="30">
+      <img mat-card-lg-image id="logo" src="../../assets/logo609.png" alt="logo">
+    </div>
+    <div fxFlex="30" fxLayoutAlign="center center">
+      <span id="title">Animal Shelter</span>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile routerLink="cats">
+    <div class="tile-content">
+      <mat-icon [color]="'primary'" [inline]="true">pets</mat-icon>
+      <span>Cats</span>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile routerLink="colonies">
+    <div class="tile-content">
+      <mat-icon [color]="'primary'" [inline]="true">home</mat-icon>
+      <span>Colonies</span>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile routerLink="adopters">
+    <div class="tile-content">
+      <mat-icon [color]="'primary'" [inline]="true">people</mat-icon>
+      <span>Adopters</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+

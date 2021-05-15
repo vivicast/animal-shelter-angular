@@ -15,6 +15,7 @@ import {ColonyCreationUpdatingDialogComponent} from './colonies/colony-creation-
 import {CatsComponent} from './cats/cats.component';
 import {CatCreationUpdatingDialogComponent} from './cats/cat-creation-updating-dialog.component';
 import {CatService} from './cats/cat.service';
+import {WelcomeComponent} from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {CatService} from './cats/cat.service';
     ColoniesComponent,
     ColonyCreationUpdatingDialogComponent,
     CatsComponent,
-    CatCreationUpdatingDialogComponent
+    CatCreationUpdatingDialogComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
