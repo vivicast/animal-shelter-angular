@@ -12,6 +12,9 @@ import {AdopterCreationUpdatingDialogComponent} from './adopters/adopter-creatio
 import {ColoniesComponent} from './colonies/colonies.component';
 import {ColonyService} from './colonies/colony.service';
 import {ColonyCreationUpdatingDialogComponent} from './colonies/colony-creation-updating-dialog.component';
+import {CatsComponent} from './cats/cats.component';
+import {CatCreationUpdatingDialogComponent} from './cats/cat-creation-updating-dialog.component';
+import {CatService} from './cats/cat.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {ColonyCreationUpdatingDialogComponent} from './colonies/colony-creation-
     AdoptersComponent,
     AdopterCreationUpdatingDialogComponent,
     ColoniesComponent,
-    ColonyCreationUpdatingDialogComponent
+    ColonyCreationUpdatingDialogComponent,
+    CatsComponent,
+    CatCreationUpdatingDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import {ColonyCreationUpdatingDialogComponent} from './colonies/colony-creation-
   ],
   providers: [
     AdopterService,
-    ColonyService
+    ColonyService,
+    CatService
   ],
   bootstrap: [AppComponent]
 })
