@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-content>
+    <mat-checkbox [(ngModel)]="showOnlyAdoptableCats" (change)="search()">
+      <label><strong>Show only adoptable cats</strong></label>
+    </mat-checkbox>
+  </mat-card-content>
+</mat-card>
+<app-crud (create)="create()" (read)="read($event)" (update)="update($event)" (delete)="delete($event)"
+          [data]="cats" [title]="title"></app-crud>
