@@ -18,6 +18,7 @@ export class CatsComponent {
   cats = of([]);
 
   constructor(private dialog: MatDialog, private catService: CatService) {
+    this.search();
   }
 
   search(): void {

@@ -9,6 +9,8 @@ import {ReadDetailDialogComponent} from '@shared/dialogs/read-detail.dialog.comp
 import {UppercaseWords} from '@shared/pipes/UppercaseWordsPipe';
 import {CrudComponent} from '@shared/components/crud.component';
 import {SearchComponent} from '@shared/components/search.component';
+import {SearchByAdopterComponent} from '@shared/components/search-by-adopter.component';
+import {SharedAdopterService} from '@shared/services/shared.adopter.service';
 
 @NgModule({
   imports: [
@@ -25,6 +27,7 @@ import {SearchComponent} from '@shared/components/search.component';
     ReadDetailDialogComponent,
     SearchComponent,
     UppercaseWords,
+    SearchByAdopterComponent,
   ],
   exports: [
     CancelYesDialogComponent,
@@ -38,10 +41,14 @@ import {SearchComponent} from '@shared/components/search.component';
     ReadDetailDialogComponent,
     SearchComponent,
     UppercaseWords,
+    SearchByAdopterComponent,
   ],
   entryComponents: [
     CancelYesDialogComponent,
     ReadDetailDialogComponent,
+  ],
+  providers: [
+    SharedAdopterService
   ]
 })
 export class SharedModule {
