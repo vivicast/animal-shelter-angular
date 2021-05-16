@@ -4,4 +4,5 @@ export interface Cat {
   departureDate?: Date;
   sociable?: boolean;
   chip: number;
+  adopterNif?: string;
 }

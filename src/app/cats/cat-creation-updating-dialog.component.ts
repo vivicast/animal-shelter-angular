@@ -22,8 +22,9 @@ export class CatCreationUpdatingDialogComponent {
       name: undefined,
       admissionDate: undefined,
       departureDate: undefined,
-      sociable: undefined,
-      chip: undefined
+      sociable: false,
+      chip: undefined,
+      adopterNif: undefined
     };
     this.oldCatChip = data ? data.chip : undefined;
   }
