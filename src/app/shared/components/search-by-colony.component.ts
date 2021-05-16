@@ -9,6 +9,7 @@ import {SharedColonyService} from '@shared/services/shared.colony.service';
 export class SearchByColonyComponent {
   colonyRegistries: Observable<string[]> = of([]);
 
+  @Input() disabled = false;
   @Input() colonyRegistry: string;
   @Output() colonyRegistryChange = new EventEmitter<string>();
 

@@ -40,6 +40,14 @@ export class CatCreationUpdatingDialogComponent {
       this.check(this.cat.chip);
   }
 
+  isAdopterDisabled(): boolean {
+    return this.cat.sociable === false || !this.check(this.cat.colonyRegistry);
+  }
+
+  isColonyDisabled(): boolean {
+    return !this.check(this.cat.adopterNif);
+  }
+
   create(): void {
     this.catService
       .create(this.cat)

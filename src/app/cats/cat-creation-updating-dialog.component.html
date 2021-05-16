@@ -20,8 +20,14 @@
     <input [(ngModel)]="cat.chip" matInput required type="number"/>
   </mat-form-field>
   <ng-container *ngIf="!isCreate()">
-    <app-search-by-adopter [(adopterNif)]="cat.adopterNif" class="full-width"></app-search-by-adopter>
-    <app-search-by-colony [(colonyRegistry)]="cat.colonyRegistry" class="full-width"></app-search-by-colony>
+    <app-search-by-adopter [disabled]="isAdopterDisabled()"
+                           [(adopterNif)]="cat.adopterNif"
+                           class="full-width">
+    </app-search-by-adopter>
+    <app-search-by-colony [disabled]="isColonyDisabled()"
+                          [(colonyRegistry)]="cat.colonyRegistry"
+                          class="full-width">
+    </app-search-by-colony>
   </ng-container>
 </mat-dialog-content>
 <mat-dialog-actions>
