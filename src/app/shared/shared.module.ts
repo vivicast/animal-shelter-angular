@@ -11,6 +11,8 @@ import {CrudComponent} from '@shared/components/crud.component';
 import {SearchComponent} from '@shared/components/search.component';
 import {SearchByAdopterComponent} from '@shared/components/search-by-adopter.component';
 import {SharedAdopterService} from '@shared/services/shared.adopter.service';
+import {SearchByColonyComponent} from '@shared/components/search-by-colony.component';
+import {SharedColonyService} from '@shared/services/shared.colony.service';
 
 @NgModule({
   imports: [
@@ -28,6 +30,7 @@ import {SharedAdopterService} from '@shared/services/shared.adopter.service';
     SearchComponent,
     UppercaseWords,
     SearchByAdopterComponent,
+    SearchByColonyComponent
   ],
   exports: [
     CancelYesDialogComponent,
@@ -42,13 +45,15 @@ import {SharedAdopterService} from '@shared/services/shared.adopter.service';
     SearchComponent,
     UppercaseWords,
     SearchByAdopterComponent,
+    SearchByColonyComponent
   ],
   entryComponents: [
     CancelYesDialogComponent,
     ReadDetailDialogComponent,
   ],
   providers: [
-    SharedAdopterService
+    SharedAdopterService,
+    SharedColonyService
   ]
 })
 export class SharedModule {

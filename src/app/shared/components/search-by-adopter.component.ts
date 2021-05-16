@@ -15,7 +15,7 @@ export class SearchByAdopterComponent {
   constructor(private sharedAdopterService: SharedAdopterService) {
   }
 
-  public onSelect(): void {
+  onSelect(): void {
     this.adopterNifChange.emit(this.adopterNif);
   }
 
