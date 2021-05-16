@@ -11,6 +11,7 @@ export class SearchComponent {
   @Input() key: string;
   @Input() keys = of([]);
   @Input() obligatory = false;
+  @Input() disabled = false;
 
   @Output() keyChange = new EventEmitter<string>();
   @Output() renew = new EventEmitter<any>();

@@ -24,7 +24,8 @@ export class CatCreationUpdatingDialogComponent {
       departureDate: undefined,
       sociable: false,
       chip: undefined,
-      adopterNif: undefined
+      adopterNif: undefined,
+      colonyRegistry: undefined
     };
     this.oldCatChip = data ? data.chip : undefined;
   }
@@ -37,6 +38,14 @@ export class CatCreationUpdatingDialogComponent {
     return this.check(this.cat.name) ||
       this.check(this.cat.admissionDate) ||
       this.check(this.cat.chip);
+  }
+
+  isAdopterDisabled(): boolean {
+    return this.cat.sociable === false || !this.check(this.cat.colonyRegistry);
+  }
+
+  isColonyDisabled(): boolean {
+    return !this.check(this.cat.adopterNif);
   }
 
   create(): void {

@@ -9,13 +9,14 @@ import {SharedAdopterService} from '@shared/services/shared.adopter.service';
 export class SearchByAdopterComponent {
   adopterNifs: Observable<string[]> = of([]);
 
+  @Input() disabled = false;
   @Input() adopterNif: string;
   @Output() adopterNifChange = new EventEmitter<string>();
 
   constructor(private sharedAdopterService: SharedAdopterService) {
   }
 
-  public onSelect(): void {
+  onSelect(): void {
     this.adopterNifChange.emit(this.adopterNif);
   }
 

@@ -5,4 +5,5 @@ export interface Cat {
   sociable?: boolean;
   chip: number;
   adopterNif?: string;
+  colonyRegistry?: string;
 }

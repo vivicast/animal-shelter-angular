@@ -4,13 +4,14 @@
          [matAutocomplete]="auto"
          [ngModel]="key"
          [required]="obligatory"
+         [disabled]="disabled"
          matInput
          type="text"
   >
-  <button (click)="onRenew()" mat-icon-button matSuffix matTooltip="Renew" matTooltipShowDelay="2000">
+  <button (click)="onRenew()" [disabled]="disabled" mat-icon-button matSuffix matTooltip="Renew" matTooltipShowDelay="2000">
     <mat-icon>autorenew</mat-icon>
   </button>
-  <button (click)="resetKey()" *ngIf="key" aria-label="Clear" mat-button mat-icon-button matSuffix>
+  <button (click)="resetKey()" [disabled]="disabled" *ngIf="key" aria-label="Clear" mat-button mat-icon-button matSuffix>
     <mat-icon>close</mat-icon>
   </button>
   <mat-autocomplete #auto="matAutocomplete">
