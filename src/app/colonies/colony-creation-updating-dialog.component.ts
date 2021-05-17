@@ -10,7 +10,7 @@ import {ColonyService} from './colony.service';
 export class ColonyCreationUpdatingDialogComponent {
   title: string;
   colony: Colony;
-  oldColonyRegistry: number;
+  oldColonyRegistry: string;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) data: Colony,

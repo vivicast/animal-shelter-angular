@@ -23,15 +23,15 @@ export class ColonyService {
     return this.httpService.post(EndPoints.COLONIES, colony);
   }
 
-  read(registry: number): Observable<Colony> {
+  read(registry: string): Observable<Colony> {
     return this.httpService.get(EndPoints.COLONIES + '/' + registry);
   }
 
-  update(oldRegistry: number, colony: Colony): Observable<Colony> {
+  update(oldRegistry: string, colony: Colony): Observable<Colony> {
     return this.httpService.put(EndPoints.COLONIES + '/' + oldRegistry, colony);
   }
 
-  delete(registry: number): Observable<void> {
+  delete(registry: string): Observable<void> {
     return this.httpService.delete(EndPoints.COLONIES + '/' + registry);
   }
 }
