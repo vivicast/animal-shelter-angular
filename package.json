@@ -1,6 +1,6 @@
 {
   "name": "animal-shelter-angular",
-  "version": "1.0.0",
+  "version": "1.0.1-release",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
