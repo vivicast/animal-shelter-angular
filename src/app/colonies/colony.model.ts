@@ -1,5 +1,5 @@
 export interface Colony {
-  registry: number;
+  registry: string;
   manager: string;
   phone?: string;
   location?: string;
