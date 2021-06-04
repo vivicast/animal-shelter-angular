@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  REST_ANIMAL_SHELTER_ADOPTER: 'http://localhost:8080',
-  REST_ANIMAL_SHELTER_COLONY: 'http://localhost:8081',
-  REST_ANIMAL_SHELTER_CAT: 'http://localhost:8082'
+  REST_ANIMAL_SHELTER: 'http://localhost:8084'
 };
 
 /*

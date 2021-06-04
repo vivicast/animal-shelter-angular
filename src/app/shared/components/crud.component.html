@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>{{title}}<span *ngIf="columns.length===0"> - EMPTY!</span></mat-card-title>
+  <mat-card-title>{{title}}<span *ngIf="!!columns && columns.length===0"> - EMPTY!</span></mat-card-title>
   <mat-card-content>
     <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
       <mat-header-row *matHeaderRowDef="columnsHeader"></mat-header-row>
